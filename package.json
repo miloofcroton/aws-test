@@ -23,6 +23,9 @@
     "deploy:prod": "better-npm-run deploy:prod",
     "flow:check": "babel-node bin/flow-check",
     "codecov": "cat coverage/*/lcov.info | codecov"
+    "build:prod": "sudo docker build -t miloofcroton/zen-production .",
+    "start:prod": "sudo docker run --rm -d -p 8085:80 --name running-zen miloofcroton/zen-production",
+    "stop:prod": "docker stop running-zen",
   },
   "betterScripts": {
     "compile": {
